@@ -1,0 +1,262 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>임도율의 올영·다이소 픽</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{--ink:#3B2A2A;--pink:#FF8FA3;--cream:#FFF8F1;--oy:#5E8B3A;--ds:#E03A3E}
+*{box-sizing:border-box;margin:0}
+body{font-family:Pretendard,"Malgun Gothic",sans-serif;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#FFD9E0 0%,#FFF1EA 100%);padding:56px 24px 90px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:#fff;opacity:.5}
+.hero:before{width:260px;height:260px;right:-60px;top:-80px}
+.hero:after{width:140px;height:140px;left:-40px;bottom:-40px}
+.wrap{max-width:1120px;margin:0 auto;position:relative;z-index:1}
+.hero .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;background:var(--ink);color:#fff;padding:6px 12px;border-radius:999px}
+h1{font-size:clamp(30px,5.4vw,54px);font-weight:800;line-height:1.18;letter-spacing:-.03em;margin:18px 0 14px}
+h1 em{font-style:normal;background:linear-gradient(transparent 62%,#FFB6C1 62%)}
+.hero p{font-size:16px;line-height:1.7;color:#6b5555;max-width:480px}
+.chips{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap}
+.chips span{background:#fff;border:2px solid var(--ink);border-radius:999px;font-size:13px;font-weight:700;padding:6px 14px}
+.mascot{width:190px;flex:none;animation:fl 3.4s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-12px) rotate(2deg)}}
+.tools{position:sticky;top:0;z-index:10;background:rgba(255,248,241,.92);backdrop-filter:blur(8px);border-bottom:1px solid #f0e2d8}
+.tools .wrap{display:flex;gap:8px;flex-wrap:wrap;align-items:center;padding:14px 24px}
+.tools button{font:inherit;font-size:14px;font-weight:600;padding:9px 18px;border:2px solid var(--ink);background:#fff;border-radius:999px;cursor:pointer;color:var(--ink);transition:.15s}
+.tools button:hover{transform:translateY(-1px)}
+.tools button.on{background:var(--ink);color:#fff}
+.tools input{font:inherit;font-size:14px;margin-left:auto;padding:10px 16px;border:2px solid var(--ink);border-radius:999px;width:230px;background:#fff;outline:none}
+.tools input:focus{border-color:var(--pink)}
+.cnt{font-size:13px;color:#9a8582;padding:20px 24px 6px;max-width:1120px;margin:0 auto}
+.grid{max-width:1120px;margin:0 auto;padding:6px 24px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:26px 20px}
+.card{background:#fff;border:2px solid var(--ink);border-radius:20px;padding:12px;box-shadow:4px 4px 0 var(--ink);transition:.18s}
+.card:hover{transform:translate(-2px,-3px);box-shadow:7px 8px 0 var(--ink)}
+.card.hide{display:none}
+.ph{display:block;position:relative;aspect-ratio:1/1;border-radius:12px;overflow:hidden;background:var(--bg)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+.ini{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(59,42,42,.55);text-align:center;padding:12px}
+.num{position:absolute;left:10px;top:8px;font-size:12px;font-weight:800;color:rgba(59,42,42,.35)}
+.tag{position:absolute;right:10px;top:10px;z-index:3;font-size:11px;font-weight:700;color:#fff;padding:4px 10px;border-radius:999px}
+.tag.oy{background:var(--oy)}.tag.ds{background:var(--ds)}
+.info{padding:14px 4px 4px}
+.brand{font-size:12px;font-weight:800;color:#E5617A;letter-spacing:.04em}
+h3{font-size:16px;font-weight:700;line-height:1.45;margin:4px 0 14px;min-height:46px}
+.opt{display:inline-block;font-size:12px;font-weight:700;background:#FFE1E8;padding:1px 9px;border-radius:999px;vertical-align:1px}
+.go{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;font-size:14px;font-weight:700;border-radius:12px;color:#fff;transition:.15s}
+.go.oy{background:var(--oy)}.go.ds{background:var(--ds)}
+.go:hover{filter:brightness(.9)}.go span{transition:.15s}.go:hover span{transform:translateX(4px)}
+.empty{display:none;text-align:center;padding:60px 0;color:#9a8582}
+footer{background:var(--ink);color:#e9d9d5;text-align:center;padding:36px 16px 44px;font-size:13px;line-height:1.9}
+footer .m{width:54px;display:block;margin:0 auto 10px}
+@media(max-width:640px){.hero .wrap{flex-direction:column-reverse;align-items:flex-start}.mascot{width:120px}.tools input{width:100%;margin-left:0}}
+</style></head><body>
+<section class="hero"><div class="wrap"><div>
+<span class="eyebrow">YIMI'S PICK</span>
+<h1>영상에 나온 그 제품,<br><em>여기 다 모아놨어요</em></h1>
+<p>영상이랑 Plog에서 소개한 제품 링크 모음이에요. 누르면 올리브영·다이소몰 상품 페이지로 바로 가요.</p>
+<div class="chips"><span>올리브영 15개</span><span>다이소몰 9개</span><span>总共 24款</span></div>
+</div><svg viewBox="0 0 120 120" class="mascot" aria-hidden="true"><ellipse cx="60" cy="112" rx="30" ry="5" fill="#000" opacity=".08"/><path d="M60 14c24 0 42 18 42 44 0 28-17 48-42 48S18 86 18 58c0-26 18-44 42-44z" fill="#FFE3D6" stroke="#3B2A2A" stroke-width="3"/><path d="M42 18c-8-10-18-8-20 0 6 2 12 4 20 0zM78 18c8-10 18-8 20 0-6 2-12 4-20 0z" fill="#FFB6C1" stroke="#3B2A2A" stroke-width="3" stroke-linejoin="round"/><circle cx="45" cy="58" r="5" fill="#3B2A2A"/><circle cx="75" cy="58" r="5" fill="#3B2A2A"/><circle cx="47" cy="56" r="1.6" fill="#fff"/><circle cx="77" cy="56" r="1.6" fill="#fff"/><ellipse cx="34" cy="70" rx="7" ry="4.5" fill="#FF9DB0" opacity=".7"/><ellipse cx="86" cy="70" rx="7" ry="4.5" fill="#FF9DB0" opacity=".7"/><path d="M53 70q7 8 14 0" fill="none" stroke="#3B2A2A" stroke-width="3" stroke-linecap="round"/><path d="M60 34l3 6 6 1-4.5 4 1.2 6-5.7-3-5.7 3 1.2-6-4.5-4 6-1z" fill="#FFD84D" stroke="#3B2A2A" stroke-width="2" stroke-linejoin="round" transform="translate(0 -8) scale(.9) translate(6 2)"/></svg></div></section>
+<div class="tools"><div class="wrap"><button class="on" data-f="전체">전체</button><button data-f="올리브영">올리브영</button><button data-f="다이소몰">다이소몰</button><input id="q" placeholder="제품 이름으로 찾기"></div></div>
+<div class="cnt" id="cnt"></div>
+<main class="grid" id="g">
+<article class="card" data-s="올리브영" data-t="키엘클리어리 코렉티브 다크 스팟 솔루션">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000214258" target="_blank" rel="noopener" style="--bg:#FFE1E8">
+<span class="num">01</span>
+<span class="ini">키엘</span>
+<img src="images/01.jpg" alt="키엘 클리어리 코렉티브 다크 스팟 솔루션" loading="lazy" onerror="this.onerror=null;this.src='images/01.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">키엘</div><h3>클리어리 코렉티브 다크 스팟 솔루션 </h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000214258" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="아누아나이아신아마이드 10 TXA 4% 다크 스팟 세럼">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000208708" target="_blank" rel="noopener" style="--bg:#FFF0C9">
+<span class="num">02</span>
+<span class="ini">아누아</span>
+<img src="images/02.jpg" alt="아누아 나이아신아마이드 10 TXA 4% 다크 스팟 세럼" loading="lazy" onerror="this.onerror=null;this.src='images/02.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">아누아</div><h3>나이아신아마이드 10 TXA 4% 다크 스팟 세럼 </h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000208708" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="센텔리안24마데카 기미잡티 앰플">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000191798" target="_blank" rel="noopener" style="--bg:#DDF0E3">
+<span class="num">03</span>
+<span class="ini">센텔리안24</span>
+<img src="images/03.jpg" alt="센텔리안24 마데카 기미잡티 앰플" loading="lazy" onerror="this.onerror=null;this.src='images/03.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">센텔리안24</div><h3>마데카 기미잡티 앰플 </h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000191798" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="메디힐마스크팩">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000217620" target="_blank" rel="noopener" style="--bg:#E3E6FF">
+<span class="num">04</span>
+<span class="ini">메디힐</span>
+<img src="images/04.jpg" alt="메디힐 마스크팩" loading="lazy" onerror="this.onerror=null;this.src='images/04.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">메디힐</div><h3>마스크팩 </h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000217620" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="헤라센슈얼 누드 글로스421호">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000177984" target="_blank" rel="noopener" style="--bg:#FFE4D2">
+<span class="num">05</span>
+<span class="ini">헤라</span>
+<img src="images/05.jpg" alt="헤라 센슈얼 누드 글로스" loading="lazy" onerror="this.onerror=null;this.src='images/05.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">헤라</div><h3>센슈얼 누드 글로스 <span class="opt">421호</span></h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000177984" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="헤라센슈얼 누드 글로스102호">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000177984" target="_blank" rel="noopener" style="--bg:#E9DDFB">
+<span class="num">06</span>
+<span class="ini">헤라</span>
+<img src="images/06.jpg" alt="헤라 센슈얼 누드 글로스" loading="lazy" onerror="this.onerror=null;this.src='images/06.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">헤라</div><h3>센슈얼 누드 글로스 <span class="opt">102호</span></h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000177984" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="헤라센슈얼 누드 글로스390호">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000177984" target="_blank" rel="noopener" style="--bg:#FFE1E8">
+<span class="num">07</span>
+<span class="ini">헤라</span>
+<img src="images/07.jpg" alt="헤라 센슈얼 누드 글로스" loading="lazy" onerror="this.onerror=null;this.src='images/07.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">헤라</div><h3>센슈얼 누드 글로스 <span class="opt">390호</span></h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000177984" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="어뮤즈세라믹 스킨 퍼펙트 쿠션">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000200357" target="_blank" rel="noopener" style="--bg:#FFF0C9">
+<span class="num">08</span>
+<span class="ini">어뮤즈</span>
+<img src="images/08.jpg" alt="어뮤즈 세라믹 스킨 퍼펙트 쿠션" loading="lazy" onerror="this.onerror=null;this.src='images/08.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">어뮤즈</div><h3>세라믹 스킨 퍼펙트 쿠션 </h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000200357" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="릴리바이레드하트 블러셔순수빔">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000137963" target="_blank" rel="noopener" style="--bg:#DDF0E3">
+<span class="num">09</span>
+<span class="ini">릴리바이레드</span>
+<img src="images/09.jpg" alt="릴리바이레드 하트 블러셔" loading="lazy" onerror="this.onerror=null;this.src='images/09.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">릴리바이레드</div><h3>하트 블러셔 <span class="opt">순수빔</span></h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000137963" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="릴리바이레드하트 블러셔복숭빔">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000137963" target="_blank" rel="noopener" style="--bg:#E3E6FF">
+<span class="num">10</span>
+<span class="ini">릴리바이레드</span>
+<img src="images/10.jpg" alt="릴리바이레드 하트 블러셔" loading="lazy" onerror="this.onerror=null;this.src='images/10.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">릴리바이레드</div><h3>하트 블러셔 <span class="opt">복숭빔</span></h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000137963" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="컬러그램프루티 글라스 틴트 미니">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000221670" target="_blank" rel="noopener" style="--bg:#FFE4D2">
+<span class="num">11</span>
+<span class="ini">컬러그램</span>
+<img src="images/11.jpg" alt="컬러그램 프루티 글라스 틴트 미니" loading="lazy" onerror="this.onerror=null;this.src='images/11.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">컬러그램</div><h3>프루티 글라스 틴트 미니 </h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000221670" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="라운드랩자작나무 수분 선크림">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000263510" target="_blank" rel="noopener" style="--bg:#E9DDFB">
+<span class="num">12</span>
+<span class="ini">라운드랩</span>
+<img src="images/12.jpg" alt="라운드랩 자작나무 수분 선크림" loading="lazy" onerror="this.onerror=null;this.src='images/12.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">라운드랩</div><h3>자작나무 수분 선크림 </h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000263510" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="투쿨포스쿨아트클래스 프로타주 펜슬">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000120656" target="_blank" rel="noopener" style="--bg:#FFE1E8">
+<span class="num">13</span>
+<span class="ini">투쿨포스쿨</span>
+<img src="images/13.jpg" alt="투쿨포스쿨 아트클래스 프로타주 펜슬" loading="lazy" onerror="this.onerror=null;this.src='images/13.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">투쿨포스쿨</div><h3>아트클래스 프로타주 펜슬 </h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000120656" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="웨이크메이크네일건핑크 하더너">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000180019" target="_blank" rel="noopener" style="--bg:#FFF0C9">
+<span class="num">14</span>
+<span class="ini">웨이크메이크</span>
+<img src="images/14.jpg" alt="웨이크메이크 네일건" loading="lazy" onerror="this.onerror=null;this.src='images/14.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">웨이크메이크</div><h3>네일건 <span class="opt">핑크 하더너</span></h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000180019" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="다이소몰" data-t="다이소광채쿠션 워터퍼프광채물먹">
+<a class="ph" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1066900&recmYn=N" target="_blank" rel="noopener" style="--bg:#DDF0E3">
+<span class="num">15</span>
+<span class="ini">다이소</span>
+<img src="images/15.jpg" alt="다이소 광채쿠션 워터퍼프" loading="lazy" onerror="this.onerror=null;this.src='images/15.png';this.onerror=function(){this.remove()}">
+<span class="tag ds">다이소몰</span></a>
+<div class="info"><div class="brand">다이소</div><h3>광채쿠션 워터퍼프 <span class="opt">광채물먹</span></h3>
+<a class="go ds" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1066900&recmYn=N" target="_blank" rel="noopener">다이소몰에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="다이소몰" data-t="VT광채토너">
+<a class="ph" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1067495&recmYn=N" target="_blank" rel="noopener" style="--bg:#E3E6FF">
+<span class="num">16</span>
+<span class="ini">VT</span>
+<img src="images/16.jpg" alt="VT 광채토너" loading="lazy" onerror="this.onerror=null;this.src='images/16.png';this.onerror=function(){this.remove()}">
+<span class="tag ds">다이소몰</span></a>
+<div class="info"><div class="brand">VT</div><h3>광채토너 </h3>
+<a class="go ds" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1067495&recmYn=N" target="_blank" rel="noopener">다이소몰에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="다이소몰" data-t="다이소포인트 필링젤">
+<a class="ph" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1057314&recmYn=N" target="_blank" rel="noopener" style="--bg:#FFE4D2">
+<span class="num">17</span>
+<span class="ini">다이소</span>
+<img src="images/17.jpg" alt="다이소 포인트 필링젤" loading="lazy" onerror="this.onerror=null;this.src='images/17.png';this.onerror=function(){this.remove()}">
+<span class="tag ds">다이소몰</span></a>
+<div class="info"><div class="brand">다이소</div><h3>포인트 필링젤 </h3>
+<a class="go ds" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1057314&recmYn=N" target="_blank" rel="noopener">다이소몰에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="다이소몰" data-t="쿤달콜라겐 헤어미스트">
+<a class="ph" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1060209&recmYn=N" target="_blank" rel="noopener" style="--bg:#E9DDFB">
+<span class="num">18</span>
+<span class="ini">쿤달</span>
+<img src="images/18.jpg" alt="쿤달 콜라겐 헤어미스트" loading="lazy" onerror="this.onerror=null;this.src='images/18.png';this.onerror=function(){this.remove()}">
+<span class="tag ds">다이소몰</span></a>
+<div class="info"><div class="brand">쿤달</div><h3>콜라겐 헤어미스트 </h3>
+<a class="go ds" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=1060209&recmYn=N" target="_blank" rel="noopener">다이소몰에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="올리브영" data-t="삐아오버글레이즈 24 구아바당">
+<a class="ph" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000225046" target="_blank" rel="noopener" style="--bg:#FFE1E8">
+<span class="num">19</span>
+<span class="ini">삐아</span>
+<img src="images/19.jpg" alt="삐아 오버글레이즈 24 구아바당" loading="lazy" onerror="this.onerror=null;this.src='images/19.png';this.onerror=function(){this.remove()}">
+<span class="tag oy">올리브영</span></a>
+<div class="info"><div class="brand">삐아</div><h3>오버글레이즈 24 구아바당</h3>
+<a class="go oy" href="https://www.oliveyoung.co.kr/store/goods/getGoodsDetail.do?goodsNo=A000000225046" target="_blank" rel="noopener">올리브영에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="다이소몰" data-t="셀트리온[다영 PICK] 다이어트 한 잔 슬림S에이드 피치플럼맛 14포 7일분">
+<a class="ph" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=025575277&amp;recmYn=N" target="_blank" rel="noopener" style="--bg:#FFF0C9">
+<span class="num">20</span>
+<span class="ini">셀트리온</span>
+<img src="images/20.jpg" alt="셀트리온 [다영 PICK] 다이어트 한 잔 슬림S에이드 피치플럼맛 14포 7일분" loading="lazy" onerror="this.onerror=null;this.src='images/20.png';this.onerror=function(){this.remove()}">
+<span class="tag ds">다이소몰</span></a>
+<div class="info"><div class="brand">셀트리온</div><h3>[다영 PICK] 다이어트 한 잔 슬림S에이드 피치플럼맛 14포 7일분</h3>
+<a class="go ds" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=025575277&amp;recmYn=N" target="_blank" rel="noopener">다이소몰에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="다이소몰" data-t="자연관바이탈 밀크씨슬&amp;비타민B 4병">
+<a class="ph" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=613602146" target="_blank" rel="noopener" style="--bg:#DDF0E3">
+<span class="num">21</span>
+<span class="ini">자연관</span>
+<img src="images/21.jpg" alt="자연관 바이탈 밀크씨슬&amp;비타민B 4병" loading="lazy" onerror="this.onerror=null;this.src='images/21.png';this.onerror=function(){this.remove()}">
+<span class="tag ds">다이소몰</span></a>
+<div class="info"><div class="brand">자연관</div><h3>바이탈 밀크씨슬&amp;비타민B 4병</h3>
+<a class="go ds" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=613602146" target="_blank" rel="noopener">다이소몰에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="다이소몰" data-t="닥터블릿푸응 7days 데일리버닝 14포 7일분">
+<a class="ph" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=286314174&amp;recmYn=N" target="_blank" rel="noopener" style="--bg:#E3E6FF">
+<span class="num">22</span>
+<span class="ini">닥터블릿</span>
+<img src="images/22.jpg" alt="닥터블릿 푸응 7days 데일리버닝 14포 7일분" loading="lazy" onerror="this.onerror=null;this.src='images/22.png';this.onerror=function(){this.remove()}">
+<span class="tag ds">다이소몰</span></a>
+<div class="info"><div class="brand">닥터블릿</div><h3>푸응 7days 데일리버닝 14포 7일분</h3>
+<a class="go ds" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=286314174&amp;recmYn=N" target="_blank" rel="noopener">다이소몰에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="다이소몰" data-t="애사비 톡사과 5g × 10개입">
+<a class="ph" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=902596192&amp;recmYn=N" target="_blank" rel="noopener" style="--bg:#FFE4D2">
+<span class="num">23</span>
+<span class="ini">애사비 톡</span>
+<img src="images/23.jpg" alt="애사비 톡 사과 5g × 10개입" loading="lazy" onerror="this.onerror=null;this.src='images/23.png';this.onerror=function(){this.remove()}">
+<span class="tag ds">다이소몰</span></a>
+<div class="info"><div class="brand">애사비 톡</div><h3>사과 5g × 10개입</h3>
+<a class="go ds" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=902596192&amp;recmYn=N" target="_blank" rel="noopener">다이소몰에서 보기<span>→</span></a></div></article>
+<article class="card" data-s="다이소몰" data-t="비비랩애사비 탱글 포켓 젤리 사과맛 5포 5일분">
+<a class="ph" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=994852703&amp;recmYn=N" target="_blank" rel="noopener" style="--bg:#E9DDFB">
+<span class="num">24</span>
+<span class="ini">비비랩</span>
+<img src="images/24.jpg" alt="비비랩 애사비 탱글 포켓 젤리 사과맛 5포 5일분" loading="lazy" onerror="this.onerror=null;this.src='images/24.png';this.onerror=function(){this.remove()}">
+<span class="tag ds">다이소몰</span></a>
+<div class="info"><div class="brand">비비랩</div><h3>애사비 탱글 포켓 젤리 사과맛 5포 5일분</h3>
+<a class="go ds" href="https://www.daisomall.co.kr/pd/pdr/SCR_PDR_0001?pdNo=994852703&amp;recmYn=N" target="_blank" rel="noopener">다이소몰에서 보기<span>→</span></a></div></article>
+</main>
+<div class="empty" id="empty">검색 결과가 없어요 🥲</div>
+<footer><svg viewBox="0 0 120 120" class="m" aria-hidden="true"><ellipse cx="60" cy="112" rx="30" ry="5" fill="#000" opacity=".08"/><path d="M60 14c24 0 42 18 42 44 0 28-17 48-42 48S18 86 18 58c0-26 18-44 42-44z" fill="#FFE3D6" stroke="#3B2A2A" stroke-width="3"/><path d="M42 18c-8-10-18-8-20 0 6 2 12 4 20 0zM78 18c8-10 18-8 20 0-6 2-12 4-20 0z" fill="#FFB6C1" stroke="#3B2A2A" stroke-width="3" stroke-linejoin="round"/><circle cx="45" cy="58" r="5" fill="#3B2A2A"/><circle cx="75" cy="58" r="5" fill="#3B2A2A"/><circle cx="47" cy="56" r="1.6" fill="#fff"/><circle cx="77" cy="56" r="1.6" fill="#fff"/><ellipse cx="34" cy="70" rx="7" ry="4.5" fill="#FF9DB0" opacity=".7"/><ellipse cx="86" cy="70" rx="7" ry="4.5" fill="#FF9DB0" opacity=".7"/><path d="M53 70q7 8 14 0" fill="none" stroke="#3B2A2A" stroke-width="3" stroke-linecap="round"/><path d="M60 34l3 6 6 1-4.5 4 1.2 6-5.7-3-5.7 3 1.2-6-4.5-4 6-1z" fill="#FFD84D" stroke="#3B2A2A" stroke-width="2" stroke-linejoin="round" transform="translate(0 -8) scale(.9) translate(6 2)"/></svg>부산외국어대학교 커리어블라썸 · 샤오홍슈 K-라이프 크리에이터 도전과제<br>제품을 누르면 올리브영·다이소몰 상품 페이지로 연결됩니다.</footer>
+<script>
+var f="전체",cards=[].slice.call(document.querySelectorAll(".card")),q=document.getElementById("q");
+function ap(){var t=q.value.replace(/\s/g,"").toLowerCase(),n=0;cards.forEach(function(c){var ok=(f=="전체"||c.dataset.s==f)&&c.dataset.t.replace(/\s/g,"").toLowerCase().indexOf(t)>-1;c.classList.toggle("hide",!ok);if(ok)n++});document.getElementById("cnt").textContent="총 "+n+"개 제품";document.getElementById("empty").style.display=n?"none":"block"}
+document.querySelectorAll(".tools button").forEach(function(b){b.onclick=function(){document.querySelectorAll(".tools button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");f=b.dataset.f;ap()}});
+q.oninput=ap;ap();
+</script></body></html>
